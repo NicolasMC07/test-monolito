@@ -10,19 +10,19 @@ on:
 
 jobs: 
     testing:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Checkout code
-          uses: actions/checkout@v3
+      runs-on: ubuntu-latest
+      steps:
+          - name: Checkout code
+            uses: actions/checkout@v3
 
-        - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-           with:
-          php-version: '8.3'
-          extensions: mbstring, pdo, bcmath
-          ini-values: post_max_size=256M, upload_max_filesize=256M
-          coverage: none
+          - name: Set up PHP
+          uses: shivammathur/setup-php@v2
+            with:
+            php-version: '8.3'
+            extensions: mbstring, pdo, bcmath
+            ini-values: post_max_size=256M, upload_max_filesize=256M
+            coverage: none
 
-      - name: Saludar
-        run: php --version
+        - name: Saludar
+          run: php --version
 
